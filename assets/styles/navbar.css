@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+header nav a {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #333;
+}
+header nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #f4f4f4;
+}
+header nav a:hover {
+  cursor: pointer;
+  color: green;
+}/*# sourceMappingURL=navbar.css.map */
