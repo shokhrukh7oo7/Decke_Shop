@@ -1,0 +1,50 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+header {
+  nav {
+    height: 110px;
+    .navbar-brand {
+      margin-right: 40px;
+      img {
+        width: 100%;
+        max-width: 128px;
+      }
+    }
+    ul {
+      gap: 15px;
+      .nav-item {
+        .nav-link {
+          @include text_info;
+          color: $black-color;
+        }
+      }
+    }
+    .collapse {
+      .navbar__contact__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        img {
+          width: 100%;
+          max-width: 38px;
+        }
+        .navbar__contact__numbers {
+          .navbar__contact__number {
+            @include text_info;
+            color: $black-color;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive styles
+
+@media (max-width: 1600px) {
+  
+}

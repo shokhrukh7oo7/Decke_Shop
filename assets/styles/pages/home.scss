@@ -1,0 +1,481 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+// COMMENT SECTION STYLES START
+#comments-section {
+  margin: 100px 0;
+  .container {
+    .comment-icon {
+      @include d_flex(
+        $display: flex,
+        $justify-content: space-between,
+        $align-items: end,
+        $flex-direction: row
+      );
+      margin: 50px 0;
+      .comment-title-left {
+        position: relative;
+        .comment-icon-box {
+          background-color: $gold-color;
+          width: 150px;
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 69px;
+          }
+        }
+        .comment-title {
+          @include text_info(600, 35px, 42.67px);
+          color: $green-color;
+          margin: 0;
+          position: absolute;
+          bottom: 5px;
+          left: 120px;
+        }
+      }
+      .comment-content-box {
+        display: none;
+        .comment-content {
+          @include text_info(500, 20px, 28.29px);
+          color: $black-color;
+          padding: 0 5px 10px;
+        }
+      }
+      .commet-btn {
+        background-color: $gold-color;
+        padding: 10px 20px 10px;
+        &:hover {
+          background-color: $btn-hover-color;
+        }
+        .question-btn {
+          color: $white-color;
+          @include text_info(500, 20px, 24.38px);
+          img {
+            width: 100%;
+            max-width: 50px;
+            margin-left: 25px;
+          }
+        }
+      }
+      .comment-btn2 {
+        display: none;
+      }
+    }
+    .comment-cards {
+      @include d_grid;
+      .card {
+        .vertical-line {
+          width: 150px;
+          height: 3px;
+          background-color: #085b53;
+          transform: rotate(90deg);
+          position: absolute;
+          bottom: 50%;
+          left: -20px;
+        }
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        padding: 10px 50px;
+        display: flex;
+        flex-direction: row;
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          padding: 1rem 1.5rem;
+          .card-text {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            line-height: 30px;
+          }
+          .comment-user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .card-icon {
+              display: flex;
+              align-items: center;
+              gap: 25px;
+              font-size: 20px;
+              font-weight: 700;
+              color: #085b53;
+              line-height: 39px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// COMMENT SECTION STYLES END
+
+// QUESTION SECTION STYLES START
+#question-section {
+  .container {
+    padding: 0;
+    .question-box {
+      display: flex;
+      .question-left-img {
+        width: 60%;
+        height: 780px;
+        img {
+          width: 100%;
+          height: 780px;
+        }
+      }
+      .question-right-section {
+        width: 100%;
+        .question-header-line {
+          height: 70px;
+          background-color: $green-color;
+          margin-bottom: 50px;
+          opacity: 0.7;
+        }
+        .question-title {
+          background-image: url("/assets/images/question-right-img.png");
+          @include bg_img;
+          height: 660px;
+          @include d_flex;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $green-color;
+            opacity: 0.5;
+          }
+          .question-title-box {
+            position: relative;
+            z-index: 1;
+            color: $white-color;
+            .question-head-title {
+              @include text_info(600, 51px, 62.17px);
+              color: $white-color;
+            }
+            .question-title-paragpraph {
+              @include text_info(600, 25px, 30.48px);
+              color: $white-color;
+              margin: 20px 0 30px;
+            }
+            .question-btn {
+              background-color: $gold-color;
+              color: $white-color;
+              @include text_info(500, 20px, 24.38px);
+              padding: 20px 20px 24px;
+              &:hover {
+                background-color: $btn-hover-color;
+              }
+              img {
+                width: 100%;
+                max-width: 50px;
+                margin-left: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// QUESTION SECTION STYLES END
+
+// ADDRESS SECTION STYLES START
+#address-section {
+  .container {
+    padding: 0;
+    .address-section {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      .address-information-box {
+        background-color: $black-color;
+        width: 100%;
+        max-width: 916px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 35px;
+        padding: 0 50px;
+        gap: 50px;
+        position: relative;
+        z-index: 10;
+        height: 680px;
+        .address-information-header-title {
+          @include text-info(600, 35px, 42.62px);
+          color: $white-color;
+        }
+        .contact {
+          display: none;
+        }
+        .address-information {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          img {
+            width: 60px;
+          }
+          .address-information-title {
+            @include text-info(400, 22px, 26.82px);
+            color: $white-color;
+            margin: 0;
+          }
+          .address-information-phone-number {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+          }
+        }
+        .work-time {
+          text-align: center;
+          @include text-info(400, 22px, 26.82px);
+          color: $white-color;
+        }
+        .social-media-items {
+          display: none;
+          .social-media-item {
+            img {
+              width: 60px;
+              transition: all 0.3s;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .address-map-section {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      iframe {
+        width: 60vw;
+      }
+    }
+  }
+}
+// ADDRESS SECTION STYLES END
+
+// RESPONSIVE STYLES
+@media (max-width: 1500px) {
+  // ADDRESS SECTION START
+  #address-section {
+    .container {
+      .address-section {
+        .address-information-box {
+          width: 100%;
+          max-width: 716px;
+        }
+      }
+    }
+  }
+  // ADDRESS SECTION END
+}
+
+@media (max-width: 1200px) {
+  // QUESTYION SECTION START
+  #question-section {
+    .container {
+      .question-box {
+        flex-direction: column;
+        .question-left-img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  // QUESTYION SECTION END
+
+  // ADDRESS SECTION START
+  #address-section {
+    .container {
+      .address-section {
+        .address-information-box {
+          width: 100%;
+          max-width: 616px;
+        }
+      }
+    }
+  }
+  // ADDRESS SECTION END
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+  //COMMENT SECTION START
+  #comments-section {
+    .container {
+      .comment-icon {
+        @include d_flex;
+        // margin: 0 0 50px 0;
+        .comment-title-left {
+          position: relative;
+          margin: 20px 60px 20px 0;
+          .comment-title {
+            bottom: 20px;
+            left: 90px;
+          }
+          .comment-icon-box {
+            width: 85px;
+            height: 85px;
+            margin-bottom: 25px;
+            img {
+              width: 35px;
+            }
+          }
+        }
+        .comment-content-box {
+          display: block;
+        }
+      }
+    }
+  }
+  //COMMENT SECTION END
+
+  // QUESTYION SECTION START
+  #question-section {
+    .container {
+      .question-box {
+        display: none;
+      }
+    }
+  }
+  // QUESTYION SECTION END
+
+  // ADDRESS SECTION START
+  #address-section {
+    .container {
+      .address-section {
+        display: flex;
+        flex-direction: column;
+        .address-information-box {
+          width: 100%;
+          max-width: 768px;
+          margin-top: 0;
+          align-items: center;
+          gap: 15px;
+          text-align: center;
+          .contact {
+            display: block;
+            @include text-info(600, 20px, 26.82px);
+          }
+          .address {
+            display: none;
+          }
+          .address-information {
+            flex-direction: column;
+            .address-information-title {
+              @include text-info(400, 16px, 24.82px);
+            }
+            .address-information-phone-numbe {
+              flex-direction: column;
+              gap: 0;
+            }
+            img {
+              width: 40px;
+            }
+            .address-information-phone-number {
+              flex-direction: column;
+              gap: 10px;
+            }
+          }
+          .social-media-items {
+            display: block;
+            .social-media-item {
+              img {
+                width: 40px;
+              }
+            }
+          }
+          .work-time {
+            @include text-info(400, 16px, 24.82px);
+          }
+        }
+      }
+      .address-map-section {
+        position: relative;
+        iframe {
+          width: 100%;
+          max-width: 768px;
+        }
+      }
+    }
+  }
+  // ADDRESS SECTION END
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+  // COMMENT SECTION START
+  #comments-section {
+    .container {
+      .comment-icon {
+        .comment-title-left {
+          .comment-icon-box {
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+            img {
+              width: 25px;
+              transform: rotate(180deg);
+            }
+          }
+          .comment-title {
+            @include text_info(700, 18px, 18.29px);
+            bottom: 10px;
+            left: 40px;
+          }
+        }
+        .comment-content-box {
+          .comment-content {
+            @include text_info(500, 15px, 18.29px);
+            color: $black-color;
+            text-align: center;
+          }
+        }
+        .commet-btn {
+          background-color: $gold-color;
+          padding: 10px 20px 10px;
+          &:hover {
+            background-color: $btn-hover-color;
+          }
+          .question-btn {
+            color: $white-color;
+            @include text_info(500, 15px, 24.38px);
+            img {
+              width: 100%;
+              max-width: 30px;
+              margin-left: 25px;
+            }
+          }
+        }
+        .comment-btn1 {
+          display: none;
+        }
+        .comment-btn2 {
+          display: block;
+        }
+      }
+      .comment-cards {
+        display: none;
+      }
+    }
+  }
+  // COMMENT SECTION END
+}

@@ -1,0 +1,39 @@
+@mixin text_info($font-weight: 600, $font-size: 20px, $line-heigth: 24.38px) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-heigth;
+}
+
+@mixin d_flex(
+  $display: flex,
+  $justify-content: center,
+  $align-items: center,
+  $flex-direction: column
+) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
+@mixin d_grid(
+  $display: grid,
+  $grid-template-column: repeat(auto-fit, minmax(450px, 1fr)),
+  $justify-content: center,
+  $gap: 50px
+) {
+  display: $display;
+  grid-template-columns: $grid-template-column;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin bg_img(
+  $background-position: center,
+  $background-repeat: no-repeat,
+  $background-size: cover
+) {
+  background-position: $background-position;
+  background-repeat: $background-repeat;
+  background-size: $background-size;
+}
