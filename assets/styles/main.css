@@ -43,4 +43,64 @@ input:focus {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 100px;
+}
+
+header .navbar-section nav {
+  height: 110px;
+}
+header .navbar-section nav .navbar-brand {
+  margin-right: 40px;
+}
+header .navbar-section nav ul {
+  gap: 15px;
+}
+header .navbar-section nav ul .nav-item .nav-link {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24.38px;
+  color: #000000;
+}
+header .navbar-section nav .collapse .navbar__contact__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+header .navbar-section nav .collapse .navbar__contact__box img {
+  width: 38px;
+}
+header .navbar-section nav .collapse .navbar__contact__box .navbar__contact__numbers .navbar__contact__number {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1400px) {
+  header nav {
+    height: 110px;
+  }
+  header nav .navbar-brand {
+    margin-right: 50px;
+  }
+  header nav ul {
+    gap: 15px;
+  }
+  header nav ul .nav-item .nav-link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24.38px;
+    color: #000000;
+  }
+  header nav .collapse .navbar__contact__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  header nav .collapse .navbar__contact__box img {
+    width: 38px;
+  }
+  header nav .collapse .navbar__contact__box .navbar__contact__numbers .navbar__contact__number {
+    margin: 0;
+    padding: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

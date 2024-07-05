@@ -1,5 +1,119 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+// COMFORT SECTION STYLES START
+#fy-comfortable {
+  .container {
+    .comfort-box {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      gap: 100px;
+      padding: 50px 0;
+      .comfort-left-section {
+        .img-section {
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 6px 6px 6px;
+          img {
+            width: 100%;
+          }
+        }
+        .comfort-left-content {
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 6px 6px 6px;
+          padding: 50px;
+          .comfort-left-content-images {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 0 15px;
+            img {
+              width: 100%;
+              max-width: 60px;
+            }
+          }
+          .comfort-left-content-images-circle {
+            @include d_flex(
+              $display: flex,
+              $justify-content: space-between,
+              $align-items: center,
+              $flex-direction: row
+            );
+            padding: 15px 35px;
+            .circle {
+              width: 30px;
+              height: 30px;
+              background-color: $white-color;
+              border-radius: $border-radius;
+              border: 10px solid $black-color;
+            }
+          }
+          .comfort-left-content-images-title-container {
+            @include d_flex(
+              $display: flex,
+              $justify-content: space-between,
+              $align-items: center,
+              $flex-direction: row
+            );
+            gap: 25px;
+            .comfort-left-content-images-title {
+              @include text_info(600, 16px, 19.5px);
+              max-width: 110px;
+              text-align: center;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .comfort-right-content {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 25px 0;
+        .comfort-right-title-contaier {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .comfort-round-img {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 50%;
+            padding: 10px;
+            img {
+              width: 40px;
+            }
+          }
+          .comfort-right-header-title {
+            @include text_info(600, 35px, 42.67px);
+            color: $green-color;
+            .comfort-right-title-contaier {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 15px;
+            }
+            .comfort-title-header {
+              margin: 0;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 24.38px;
+              color: #000;
+            }
+            .comfort-right-main-title {
+              margin: 0;
+              font-size: 16px;
+              font-weight: 500;
+              color: #000;
+              line-height: 20.72px;
+              max-width: 575px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// COMFORT SECTION STYLES END
+
 // COMMENT SECTION STYLES START
 #comments-section {
   margin: 100px 0;
@@ -263,6 +377,24 @@
 // ADDRESS SECTION STYLES END
 
 // RESPONSIVE STYLES
+@media (max-width: 1750px) {
+  // COMFORT SECTION START
+  #fy-comfortable {
+    .container {
+      .comfort-box {
+        grid-template-columns: auto;
+        .comfort-right-section {
+          .comfort-right-content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+          }
+        }
+      }
+    }
+  }
+  // COMFORT SECTION END
+}
+
 @media (max-width: 1500px) {
   // ADDRESS SECTION START
   #address-section {
@@ -279,6 +411,23 @@
 }
 
 @media (max-width: 1200px) {
+  // COMFORT SECTION START
+  #fy-comfortable {
+    .container {
+      .comfort-box {
+        grid-template-columns: auto;
+        .comfort-right-section {
+          .comfort-right-content {
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: start;
+            gap: 50px;
+          }
+        }
+      }
+    }
+  }
+  // COMFORT SECTION END
+
   // QUESTYION SECTION START
   #question-section {
     .container {
@@ -310,12 +459,55 @@
   .container {
     padding: 0 70px;
   }
+  // COMFORT SECTION START
+  #fy-comfortable {
+    .container {
+      .comfort-box {
+        grid-template-columns: auto;
+        .comfort-right-section {
+          .comfort-right-header-title {
+            @include text_info(600, 32px, 40px);
+            text-align: center;
+          }
+        }
+        .comfort-left-section {
+          display: none;
+        }
+      }
+    }
+  }
+  // COMFORT SECTION END
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 0 40px;
   }
+  // COMFORT SECTION START
+  #fy-comfortable {
+    .container {
+      .comfort-box {
+        grid-template-columns: auto;
+        .comfort-right-section {
+          .comfort-right-content {
+            grid-template-columns: auto;
+            .comfort-right-title-contaier {
+              flex-direction: column;
+              text-align: center;
+            }
+            .comfort-right-title {
+              .comfort-right-header-title {
+                font-size: 26px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // COMFORT SECTION END
+
   //COMMENT SECTION START
   #comments-section {
     .container {

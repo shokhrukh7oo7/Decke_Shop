@@ -2,40 +2,35 @@
 @import "../abstracts/variables";
 
 header {
-  nav {
-    height: 110px;
-    .navbar-brand {
-      margin-right: 40px;
-      img {
-        width: 100%;
-        max-width: 128px;
+  .navbar-section {
+    nav {
+      height: 110px;
+      .navbar-brand {
+        margin-right: 40px;
       }
-    }
-    ul {
-      gap: 15px;
-      .nav-item {
-        .nav-link {
-          @include text_info;
-          color: $black-color;
-        }
-      }
-    }
-    .collapse {
-      .navbar__contact__box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        img {
-          width: 100%;
-          max-width: 38px;
-        }
-        .navbar__contact__numbers {
-          .navbar__contact__number {
+      ul {
+        gap: 15px;
+        .nav-item {
+          .nav-link {
             @include text_info;
             color: $black-color;
-            margin: 0;
-            padding: 0;
+          }
+        }
+      }
+      .collapse {
+        .navbar__contact__box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+          img {
+            width: 38px;
+          }
+          .navbar__contact__numbers {
+            .navbar__contact__number {
+              margin: 0;
+              padding: 0;
+            }
           }
         }
       }
@@ -45,6 +40,39 @@ header {
 
 // responsive styles
 
-@media (max-width: 1600px) {
-  
+@media (max-width: 1400px) {
+  header {
+    nav {
+      height: 110px;
+      .navbar-brand {
+        margin-right: 50px;
+      }
+      ul {
+        gap: 15px;
+        .nav-item {
+          .nav-link {
+            @include text_info(600, 18px);
+            color: $black-color;
+          }
+        }
+      }
+      .collapse {
+        .navbar__contact__box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+          img {
+            width: 38px;
+          }
+          .navbar__contact__numbers {
+            .navbar__contact__number {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
